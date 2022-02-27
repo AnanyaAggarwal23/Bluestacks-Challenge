@@ -1,0 +1,60 @@
+<!-- <mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+</mat-form-field> -->
+
+<div class="mat-elevation-z8 table-container">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- Data Column -->
+        <ng-container matColumnDef="DATE">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> DATE </th>
+            <td mat-cell *matCellDef="let row"> <p class="date-text">{{row.createdOn}}</p> <p class="days-text">{{row.timeDiff}}</p> </td>
+        </ng-container>
+
+        <!-- Campaign Column -->
+        <ng-container matColumnDef="CAMPAIGN">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> CAMPAIGN </th>
+            <td mat-cell *matCellDef="let row"><div class="campaign-container"><img [src]="row.image_url" class="campaign-icon"><div class="campaign-text"><p class="name-text">{{row.name}}</p><p class="region-text">{{row.region}}</p></div> </div></td>
+        </ng-container>
+
+        <!-- View Column -->
+        <ng-container matColumnDef="VIEW">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> VIEW </th>
+            <td mat-cell *matCellDef="let row" (click)="openDialog(row)"><div class="pricing-container"><img src="../../../../assets//Dashboard/Row/Group 4/Price.png" class="icon"> <p>View Pricing</p> </div></td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="ACTIONS">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ACTIONS </th>
+            <td mat-cell *matCellDef="let row">
+                <div class="display-flex">
+                    <div class="display-flex">
+                        <img src="../../../../assets//Dashboard/Row/Group 3/file.png" class="action-icons">
+                        <p>CSV</p>
+                    </div>
+                    <div class="display-flex">
+                        <img src="../../../../assets//Dashboard/Row/Group 2/statistics-report.png" class="action-icons">
+                        <p>Report</p>
+                    </div>
+                    <div class="display-flex">
+                        <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event, row)">
+                        <mat-datepicker-toggle matSuffix [for]="picker">
+                            <img src="../../../../assets/Dashboard/Row/Group/calendar.png" class="action-icons">
+                        </mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <p>Schedule Again</p>
+                    </div>
+                </div> 
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" colspan="4">No data matching the filter</td>
+        </tr>
+    </table>
+

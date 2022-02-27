@@ -1,0 +1,98 @@
+.table-container {
+  margin-top: 2.5rem;
+}
+table {
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+tr.mat-header-row {
+  height: 48px;
+  background: #f1f1f4;
+}
+td {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+th {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #556789;
+}
+p {
+  margin: auto 0;
+}
+input {
+  display: none;
+}
+.days-text {
+  color: #2b416c;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.days-text {
+  color: #7788a3;
+  font-size: 0.875rem;
+  font-style: italics;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.display-flex {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.campaign-container {
+  display: flex;
+}
+.campaign-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: auto 0;
+}
+.campaign-text {
+  margin-left: 0.7rem;
+}
+.pricing-container {
+  display: flex;
+}
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+.action-icons {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+
+.name-text {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #556789;
+  margin: 0;
+}
+
+.region-text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1rem;
+  color: #9ca2b7;
+  margin: 0;
+}
+
+#dtPicker {
+  display: none;
+}
+
+::ng-deep .cdk-overlay-pane {
+  width: 24rem !important;
+}

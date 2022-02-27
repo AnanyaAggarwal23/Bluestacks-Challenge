@@ -1,0 +1,66 @@
+.dialog-container {
+  //   padding: 1.5rem;
+}
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-left: 0.5rem;
+}
+.display-flex {
+  display: flex;
+}
+.pricing-container {
+  display: flex;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #7788a3;
+}
+p {
+  margin: 0;
+}
+.name-text {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #2b416c;
+}
+.region-text {
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.1rem;
+
+  color: #9ca2b7;
+}
+.price-text {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: right;
+  color: #556789;
+  position: absolute;
+  right: 0;
+}
+h2 {
+  color: #2b416c;
+}
+.dialog-actions {
+  justify-content: center;
+  margin: 2rem 0 0 0;
+}
+button {
+  color: #181b34;
+  border: 2px solid #181b34;
+  box-sizing: border-box;
+  height: 48px;
+  width: 84px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+}

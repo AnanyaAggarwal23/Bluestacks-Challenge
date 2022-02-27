@@ -1,0 +1,21 @@
+<div class="dialog-container">
+    <div mat-dialog-content>
+        <div class="display-flex">
+            <img [src]="data.image_url">
+            <div class="header-text">
+                <p class="name-text">{{data.name}}</p>
+                <p class="region-text">{{data.region}}</p>
+            </div>
+        </div>
+        <h2>Pricing</h2>
+        <div class="pricing-container"><span>1 Week - 1 Month</span><p class="price-text">$ 100.00</p>
+        </div>
+        <div class="pricing-container"><span>6 Months</span><p class="price-text">$ 500.00</p>
+        </div>
+        <div class="pricing-container"><span>1 Year</span><p class="price-text">$ 900.00</p>
+        </div>
+    </div>
+    <div class="dialog-actions" mat-dialog-actions>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Close</button>
+    </div>
+</div>
